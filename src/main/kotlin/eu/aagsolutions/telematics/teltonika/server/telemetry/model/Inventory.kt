@@ -11,12 +11,12 @@ import jakarta.persistence.Table
 @Table(name = "inventory")
 class Inventory(
     @Id
-    val id: String,
+    var id: String,
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    val connectionStatus: ConnectionStatus,
+    var connectionStatus: ConnectionStatus,
     @Column(nullable = false)
-    val updateTimestamp: Long,
+    var updateTimestamp: Long,
 ) {
     enum class ConnectionStatus {
         CONNECTED,
