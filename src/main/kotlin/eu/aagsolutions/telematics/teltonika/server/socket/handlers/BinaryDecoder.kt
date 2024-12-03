@@ -10,8 +10,11 @@ import org.springframework.stereotype.Component
 @Component
 @ChannelHandler.Sharable
 class BinaryDecoder : MessageToMessageDecoder<ByteBuf>() {
-
-    override fun decode(ctx: ChannelHandlerContext, msg: ByteBuf, out: MutableList<Any>) {
+    override fun decode(
+        ctx: ChannelHandlerContext,
+        msg: ByteBuf,
+        out: MutableList<Any>,
+    ) {
         val binaryMsg = ByteArray(msg.readableBytes())
         msg.readBytes(binaryMsg)
         out.add(bytesToHex(binaryMsg))

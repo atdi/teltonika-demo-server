@@ -7,7 +7,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 
 @ConfigurationProperties(prefix = "netty")
 class NettyProperties {
-
     @NotNull
     @Size(min = 1000, max = 65535)
     var tcpPort: Int = 0

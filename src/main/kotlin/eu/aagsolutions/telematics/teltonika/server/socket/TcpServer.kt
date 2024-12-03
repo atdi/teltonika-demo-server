@@ -12,9 +12,8 @@ import java.net.InetSocketAddress
 @Component
 class TcpServer(
     private val serverBootstrap: ServerBootstrap,
-    private val tcpPort: InetSocketAddress
+    private val tcpPort: InetSocketAddress,
 ) {
-
     private var serverChannel: Channel? = null
 
     fun start() {
