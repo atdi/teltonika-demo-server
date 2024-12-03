@@ -1,4 +1,4 @@
-package eu.aagsolutions.telematics.teltonika.server.telemetry.model
+package eu.aagsolutions.telematics.teltonika.server.devices.model
 
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
