@@ -6,7 +6,5 @@ import org.springframework.stereotype.Service
 
 @Service
 class InventoryService(private val inventoryRepository: InventoryRepository) {
-    fun saveOrUpdate(inventory: Inventory): Inventory {
-        return inventoryRepository.save(inventory)
-    }
+    fun saveOrUpdate(inventory: Inventory): Inventory = inventoryRepository.save(inventory)
 }

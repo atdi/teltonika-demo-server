@@ -24,9 +24,7 @@ class ChannelService(private val inventoryService: InventoryService) {
         )
     }
 
-    fun get(key: String): Channel? {
-        return channelCache[key]
-    }
+    fun get(key: String): Channel? = channelCache[key]
 
     fun remove(key: String) {
         channelCache.remove(key)
@@ -39,7 +37,5 @@ class ChannelService(private val inventoryService: InventoryService) {
         )
     }
 
-    fun size(): Int {
-        return channelCache.size
-    }
+    fun size(): Int = channelCache.size
 }
